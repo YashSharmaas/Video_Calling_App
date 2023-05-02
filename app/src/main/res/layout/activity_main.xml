@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rela"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:background="@drawable/header"
+        >
+
+        <TextView
+            android:id="@+id/wel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="87dp"
+            android:text="Welcome Back"
+            android:textColor="@color/white"
+            android:textSize="40dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/login_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/wel"
+            android:layout_alignStart="@+id/wel"
+            android:layout_alignEnd="@+id/wel"
+            android:text="Sign In to Continue"
+            android:textAlignment="center"
+            android:textColor="#FF9800"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rela"
+        >
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#ad168b"
+            android:padding="10dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/emaailtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:layout_marginLeft="10dp"/>
+
+        <EditText
+            android:id="@+id/reg_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emaailtxt"
+            android:hint="Enter Your Email.... "
+            android:padding="15dp"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/forget"/>
+
+        <TextView
+            android:id="@+id/passtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reg_email"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:layout_marginLeft="10dp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passtxt"
+            android:layout_alignStart="@+id/passtxt"
+            android:layout_alignEnd="@+id/reg_email"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/regg_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/forget"
+                android:hint="password"
+                android:padding="15dp"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/regbtn"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/passtxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="74dp"
+            android:background="@drawable/button"
+            android:text="Login" />
+
+        <TextView
+            android:id="@+id/login_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/regbtn"
+            android:layout_centerInParent="true"
+            android:padding="15dp"
+            android:text="Don't have an account? Register Here!"
+            android:textColor="#ad168b"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_tv"
+            android:layout_alignStart="@+id/login_tv"
+            android:layout_alignEnd="@+id/login_tv"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="109dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="115dp"
+            android:layout_marginBottom="58dp" />
+
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
